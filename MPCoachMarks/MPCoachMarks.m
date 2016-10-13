@@ -434,7 +434,7 @@ NSString *const kContinueLabelText = @"Tap to continue";
     }
     
     if (self.enableSkipButton) {
-        btnSkipCoach = [[UIButton alloc] initWithFrame:(CGRect){{lblContinueWidth, 400.0f}, {btnSkipWidth, 30.0f}}];
+        btnSkipCoach = [[UIButton alloc] initWithFrame:(CGRect){{lblContinueWidth, [self yOriginForContinueLabel]}, {btnSkipWidth, 30.0f}}];
         [btnSkipCoach addTarget:self action:@selector(skipCoach) forControlEvents:UIControlEventTouchUpInside];
         [btnSkipCoach setTitle:self.skipButtonText forState:UIControlStateNormal];
         btnSkipCoach.titleLabel.font = [UIFont boldSystemFontOfSize:13.0f];
